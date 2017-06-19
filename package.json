@@ -19,6 +19,7 @@
   "dependencies": {
     "cheerio": "1.0.0-rc.1",
     "papaparse": "4.3.3",
+    "promised-mongo": "1.2.0",
     "request": "2.81.0",
     "request-promise": "4.2.1"
   }
