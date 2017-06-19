@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/JavaScript-Data-Wrangling/Chapter-3#readme",
   "dependencies": {
+    "cheerio": "1.0.0-rc.1",
     "papaparse": "4.3.3",
     "request": "2.81.0",
     "request-promise": "4.2.1"
