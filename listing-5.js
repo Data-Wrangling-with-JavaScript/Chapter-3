@@ -1,12 +1,12 @@
 'use strict';
 
-var importJson = require("./toolkit/importJsonFile.js"); //#A
+var importJson = require("./toolkit/importJsonFile.js");
 
-importJson("./data/earthquakes.json") //#B
-	.then(data => { //#C
-		console.log(data); //#D
-	}) //#C
-	.catch(err => { //#E
-		console.error("An error occurred."); //#E
+importJson("./data/earthquakes.json")
+	.then(data => {
+		console.log(data);
+	})
+	.catch(err => {
+		console.error("An error occurred.");
 		console.error(err.stack);
-	}); //#E
+	});
