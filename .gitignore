@@ -1,1 +1,3 @@
 node_modules/
+MongoDB/.vagrant/
+MySql/.vagrant/
