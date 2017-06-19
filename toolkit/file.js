@@ -18,7 +18,22 @@ var read = function (fileName) {
     });
 };
 
-module.exports = {
-    read: read,
+var write = function (fileName, textFileData) {
+	return new Promise((resolve, reject) => {
+		fs.writeFile(fileName, textFileData,
+			function (err) {
+				if (err) {
+					reject(err);
+					return;
+				}
+
+				resolve();
+			}
+		);
+	});
 };
 
+module.exports = {
+	read: read,
+	write: write,
+};
