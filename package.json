@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/JavaScript-Data-Wrangling/Chapter-3#readme",
   "dependencies": {
-    "papaparse": "4.3.3"
+    "papaparse": "4.3.3",
+    "request": "2.81.0",
+    "request-promise": "4.2.1"
   }
 }
