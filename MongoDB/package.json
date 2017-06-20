@@ -1,0 +1,15 @@
+{
+  "name": "vagrant",
+  "version": "1.0.0",
+  "description": "",
+  "main": "db-init.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "papaparse": "^4.3.3",
+    "promised-mongo": "^1.2.0"
+  }
+}
