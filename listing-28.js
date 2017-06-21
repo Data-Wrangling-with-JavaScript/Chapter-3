@@ -19,7 +19,7 @@ var config = {
 var db = mysql.getInstance(config);
 
 importCsvFile('./data/earthquakes.csv')
-    .then(data => exportToMySql(db, 'largest_earthquakes', data))
+    .then(data => exportToMySql(db, 'largest_earthquakes_export', data))
     .catch(err => {
         console.error("An error occurred.");
         console.error(err.stack);

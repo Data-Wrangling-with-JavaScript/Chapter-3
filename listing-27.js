@@ -17,7 +17,7 @@ var config = {
 var db = mysql.getInstance(config);
 
 var createDbCmd =
-    "create table largest_earthquakes ( Magnitude double, Time text, Latitude double, Longitude double, `Depth/Km` double )";
+    "create table largest_earthquakes_export ( Magnitude double, Time datetime, Latitude double, Longitude double, `Depth/Km` double )";
 
 db.exec(createDbCmd)
     .then(() => {
