@@ -4,4 +4,4 @@ var importFromMySql = function (db, tableName) {
     return db.exec('select * from ' + tableName);
 };
 
-modules.export = importFromMySql;
+module.exports = importFromMySql;
