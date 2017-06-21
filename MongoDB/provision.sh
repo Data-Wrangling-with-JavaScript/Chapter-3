@@ -16,10 +16,7 @@ sudo apt-get install -y --force-yes mongodb-org
 sudo sed -i 's/bindIp: 127.0.0.1/#bindIp: 127.0.0.1/g' /etc/mongod.conf # Open network interface.
 sudo service mongod restart
 
-cd /vagrant
-
-npm install
-
 echo "============== Import example data =================="
-
+cd /vagrant
+npm install
 node db-init.js
