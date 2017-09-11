@@ -1,7 +1,7 @@
 {
-  "name": "chapter-3",
+  "name": "chapter-4",
   "version": "1.0.0",
-  "description": "Code listings and examples for Chapter 3 of JavaScript Data Wrangling.",
+  "description": "Code listings and examples for Chapter 4 of JavaScript Data Wrangling.",
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/JavaScript-Data-Wrangling/Chapter-3#readme",
   "dependencies": {
-    "cheerio": "1.0.0-rc.1",
     "nodejs-mysql": "0.1.3",
     "papaparse": "4.3.3",
     "promised-mongo": "1.2.0",

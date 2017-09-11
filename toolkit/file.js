@@ -1,3 +1,9 @@
+'use strict';
+
+//
+// Toolkit functions for reading and writing files.
+//
+
 var fs = require('fs');
 
 //
@@ -18,6 +24,9 @@ var read = function (fileName) {
     });
 };
 
+//
+// Write a text file to the file system.
+//
 var write = function (fileName, textFileData) {
 	return new Promise((resolve, reject) => {
 		fs.writeFile(fileName, textFileData,
