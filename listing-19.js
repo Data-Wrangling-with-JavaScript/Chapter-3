@@ -1,10 +1,10 @@
 'use strict';
 
 var importCsvFile = require('./toolkit/importCsvFile.js');
-var exportCsvFile = require('./toolkit/exportCsvFile.js');
+var exportJsonFile = require('./toolkit/exportJsonFile.js');
 
 importCsvFile("./data/earthquakes.csv")
-	.then(data => exportCsvFile("./output/earthquakes-export.csv", data))
+	.then(data => exportJsonFile("./output/earthquakes.json", data))
 	.catch(err => {
 		console.error("An error occurred.");
 		console.error(err.stack);

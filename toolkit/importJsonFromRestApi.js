@@ -3,9 +3,9 @@
 var request = require('request-promise');
 
 var importJsonFromRestApi = function (url) {
-    return request.get({
-            uri: url,
-            json: true
+    return request.get(url)
+        .then(response => {
+            return JSON.parse(response);
         });
 };
 

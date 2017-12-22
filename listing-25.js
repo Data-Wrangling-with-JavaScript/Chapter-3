@@ -1,15 +1,29 @@
 'use strict';
 
-var importCsvFile = require('./toolkit/importCsvFile.js');
-var exportToMongoDB = require('./toolkit/exportToMongoDB.js');
-var mongo = require('promised-mongo');
+var mysql = require('nodejs-mysql').default;
 
-var db = mongo('localhost:6000/earthquakes', ['largest_earthquakes_export']);
+var config = {
+    host: 'localhost',
+    port: 5000,
+    user: 'root',
+    password: 'root',
+    database: 'earthquakes',
+    dateStrings: true,
+    debug: true,
+    acquireTimeout: 0,
+    connectTimeout: 0,
+};
 
-importCsvFile('./data/earthquakes.csv')
-    .then(data => exportToMongoDB(db, 'largest_earthquakes_export', data))
-    .then(() => db.close())
+var db = mysql.getInstance(config);
+
+var createDbCmd =
+    "create table largest_earthquakes_export ( Magnitude double, Time datetime, Latitude double, Longitude double, `Depth/Km` double )";
+
+db.exec(createDbCmd)
+    .then(() => {
+        console.log('Database table created!');
+    })
     .catch(err => {
-        console.error("An error occurred.");
+        console.error("Failed to create the database table.");
         console.error(err.stack);
     });
