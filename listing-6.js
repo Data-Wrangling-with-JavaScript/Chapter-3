@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var importJsonFile = require("./toolkit/importJsonFile.js");
+var importJsonFile = require('/toolkit/importJsonFile.js');
 
 importJsonFile("./data/earthquakes.json")
 	.then(data => {

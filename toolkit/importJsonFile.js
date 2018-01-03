@@ -1,11 +1,11 @@
-'use strict';
+"use strict";
 
-var file = require("./file.js");
+var file = require('./file.js');
 
 //
 // Helper function to import a JSON file.
 //
-var importJsonFile = function (filePath) {
+function importJsonFile (filePath) {
 	return file.read(filePath)
 		.then(textFileData => {
 			return JSON.parse(textFileData);

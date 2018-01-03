@@ -1,15 +1,15 @@
-'use strict';
+"use strict";
 
 var importCsvFile = require('./toolkit/importCsvFile.js');
 var exportToMySql = require('./toolkit/exportToMySql.js');
 var mysql = require('nodejs-mysql').default;
 
 var config = {
-    host: 'localhost',
+    host: "localhost",
     port: 5000,
-    user: 'root',
-    password: 'root',
-    database: 'earthquakes',
+    user: "root",
+    password: "root",
+    database: "earthquakes",
     dateStrings: true,
     debug: true,
     acquireTimeout: 0,
@@ -18,8 +18,8 @@ var config = {
 
 var db = mysql.getInstance(config);
 
-importCsvFile('./data/earthquakes.csv')
-    .then(data => exportToMySql(db, 'largest_earthquakes_export', data))
+importCsvFile("./data/earthquakes.csv")
+    .then(data => exportToMySql(db, "largest_earthquakes_export", data))
     .catch(err => {
         console.error("An error occurred.");
         console.error(err.stack);

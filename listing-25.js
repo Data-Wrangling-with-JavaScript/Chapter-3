@@ -1,13 +1,13 @@
-'use strict';
+"use strict";
 
 var mysql = require('nodejs-mysql').default;
 
 var config = {
-    host: 'localhost',
+    host: "localhost",
     port: 5000,
-    user: 'root',
-    password: 'root',
-    database: 'earthquakes',
+    user: "root",
+    password: "root",
+    database: "earthquakes",
     dateStrings: true,
     debug: true,
     acquireTimeout: 0,
@@ -21,7 +21,7 @@ var createDbCmd =
 
 db.exec(createDbCmd)
     .then(() => {
-        console.log('Database table created!');
+        console.log("Database table created!");
     })
     .catch(err => {
         console.error("Failed to create the database table.");

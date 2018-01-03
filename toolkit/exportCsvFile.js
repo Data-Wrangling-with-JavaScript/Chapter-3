@@ -1,9 +1,9 @@
-'use strict';
+"use strict";
 
 var papa = require('papaparse');
 var file = require('./file.js');
 
-var exportCsvFile = function (fileName, data) {
+function exportCsvFile (fileName, data) {
     var json = papa.unparse(data);
     return file.write(fileName, json);
 };

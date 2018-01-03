@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var exportToMongoDB = function (db, collectionName, data) {
+function exportToMongoDB (db, collectionName, data) {
     return db[collectionName].insert(data);
 };
 

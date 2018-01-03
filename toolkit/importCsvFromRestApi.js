@@ -1,9 +1,9 @@
-'use strict';
+"use strict";
 
 var request = require('request-promise');
 var papa = require('papaparse');
 
-var importCsvFromRestApi = function (url) {
+function importCsvFromRestApi (url) {
     return request.get({ 
             uri: url,
             json: false

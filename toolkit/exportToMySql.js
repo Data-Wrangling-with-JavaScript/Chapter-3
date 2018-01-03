@@ -1,11 +1,11 @@
-'use strict';
+"use strict";
 
-var exportToMySql = function (db, tableName, data) {
+function exportToMySql (db, tableName, data) {
     return data.reduce(
             (prevPromise, record) =>
                 prevPromise.then(() =>
                     db.exec(
-                        'insert into ' + tableName + ' set ?',
+                        "insert into " + tableName + " set ?",
                         record
                     )
                 ),

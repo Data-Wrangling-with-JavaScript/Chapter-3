@@ -1,6 +1,8 @@
+"use strict";
+
 var fs = require('fs');
-fs.readFile("./data/earthquakes.csv", 'utf8',
-	function (err, textFileData) {
+fs.readFile("./data/earthquakes.csv", "utf8",
+	(err, textFileData) => {
 		if (err) {
 			console.error("An error occurred!");
 			return;
