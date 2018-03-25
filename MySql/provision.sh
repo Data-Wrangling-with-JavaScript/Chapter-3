@@ -23,5 +23,5 @@ sudo cp my.cnf /etc/mysql
 sudo service mysql restart
 
 echo "============== Import example data =================="
-npm install
+npm install --no-bin-links
 node db-init.js

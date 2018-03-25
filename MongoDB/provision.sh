@@ -18,5 +18,5 @@ sudo service mongod restart
 
 echo "============== Import example data =================="
 cd /vagrant
-npm install
+npm install --no-bin-links
 node db-init.js
