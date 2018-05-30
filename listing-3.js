@@ -1,6 +1,6 @@
 "use strict";
 
-var file = require('./toolkit/file.js');
+const file = require('./toolkit/file.js');
 
 file.read("./data/earthquakes.csv")
 	.then(textFileData => {

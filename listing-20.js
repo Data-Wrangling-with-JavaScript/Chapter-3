@@ -1,7 +1,7 @@
 "use strict";
 
-var importCsvFile = require('./toolkit/importCsvFile.js');
-var exportJsonFile = require('./toolkit/exportJsonFile.js');
+const importCsvFile = require('./toolkit/importCsvFile.js');
+const exportJsonFile = require('./toolkit/exportJsonFile.js');
 
 importCsvFile("./data/earthquakes.csv")
 	.then(data => exportJsonFile("./output/earthquakes.json", data))

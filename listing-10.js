@@ -1,6 +1,6 @@
 "use strict";
 
-var importCsvFile = require('./toolkit/importCsvFile.js');
+const importCsvFile = require('./toolkit/importCsvFile.js');
 
 importCsvFile("./data/earthquakes.csv")
 	.then(data => {

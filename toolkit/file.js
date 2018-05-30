@@ -4,7 +4,7 @@
 // Toolkit functions for reading and writing files.
 //
 
-var fs = require('fs');
+const fs = require('fs');
 
 //
 // Read a text file form the file system.

@@ -1,6 +1,6 @@
 "use strict";
 
-var file = require('./file.js');
+const file = require('./file.js');
 
 //
 // Helper function to import a JSON file.

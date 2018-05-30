@@ -1,9 +1,9 @@
 "use strict";
 
-var importFromMySql = require('./toolkit/importFromMySql.js');
-var mysql = require('nodejs-mysql').default;
+const importFromMySql = require('./toolkit/importFromMySql.js');
+const mysql = require('nodejs-mysql').default;
 
-var config = {
+const config = {
     host: "localhost",
     port: 5000,
     user: "root",
@@ -13,7 +13,7 @@ var config = {
     debug: true
 };
 
-var db = mysql.getInstance(config);
+const db = mysql.getInstance(config);
 
 return importFromMySql(db, "largest_earthquakes")
     .then(data => {

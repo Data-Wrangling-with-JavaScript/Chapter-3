@@ -1,5 +1,7 @@
 "use strict";
 
+const importCsvFile = require('./toolkit/importCsvFile.js');
+const exportToMySql = require('./toolkit/exportToMySql.js');
 const mysql = require('nodejs-mysql').default;
 
 const config = {
@@ -16,14 +18,9 @@ const config = {
 
 const db = mysql.getInstance(config);
 
-const createDbCmd =
-    "create table largest_earthquakes_export ( Magnitude double, Time datetime, Latitude double, Longitude double, `Depth/Km` double )";
-
-db.exec(createDbCmd)
-    .then(() => {
-        console.log("Database table created!");
-    })
+importCsvFile("./data/earthquakes.csv")
+    .then(data => exportToMySql(db, "largest_earthquakes_export", data))
     .catch(err => {
-        console.error("Failed to create the database table.");
+        console.error("An error occurred.");
         console.error(err.stack);
     });

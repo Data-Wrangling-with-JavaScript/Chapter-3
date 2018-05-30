@@ -1,7 +1,7 @@
 "use strict";
 
-var papa = require('papaparse');
-var file = require('./file.js');
+const papa = require('papaparse');
+const file = require('./file.js');
 
 //
 // Helper function to import a CSV file.
@@ -9,7 +9,7 @@ var file = require('./file.js');
 function importCsvFile (filePath) {
 	return file.read(filePath)
 		.then(textFileData => {
-			var result = papa.parse(textFileData, {
+			const result = papa.parse(textFileData, {
 				header: true,
 				dynamicTyping: true,
 			});
