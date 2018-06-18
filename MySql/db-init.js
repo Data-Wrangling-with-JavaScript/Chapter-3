@@ -1,12 +1,12 @@
 'use strict';
 
-var papa = require('papaparse');
-var fs = require('fs');
+const papa = require('papaparse');
+const fs = require('fs');
 
 //
 // Read a text file form the file system.
 //
-var read = function (fileName) {
+function read (fileName) {
     return new Promise((resolve, reject) => {
         fs.readFile(fileName, 'utf8',
             function (err, textFileData) {
@@ -24,10 +24,10 @@ var read = function (fileName) {
 //
 // Helper function to import a CSV file.
 //
-var importCsvFile = function (filePath) {
+function importCsvFile (filePath) {
 	return read(filePath)
 		.then(textFileData => {
-			var result = papa.parse(textFileData, {
+			const result = papa.parse(textFileData, {
 				header: true,
 				dynamicTyping: true,
 			});
@@ -35,7 +35,7 @@ var importCsvFile = function (filePath) {
 		});
 };
 
-var exportToMySql = function (db, tableName, data) {
+function exportToMySql (db, tableName, data) {
     return data.reduce(
             (prevPromise, record) =>
                 prevPromise.then(() =>
@@ -48,9 +48,9 @@ var exportToMySql = function (db, tableName, data) {
         );
 };
 
-var mysql = require('nodejs-mysql').default;
+const mysql = require('nodejs-mysql').default;
 
-var config = {
+const config = {
     host: 'localhost',
     port: 3306,
     user: 'root',
@@ -62,9 +62,9 @@ var config = {
     connectTimeout: 0,
 };
 
-var db = mysql.getInstance(config);
+const db = mysql.getInstance(config);
 
-var createDbCmd =
+const createDbCmd =
     "create table largest_earthquakes ( Magnitude double, Time datetime, Latitude double, Longitude double, `Depth/Km` double )";
 
 db.exec(createDbCmd)
