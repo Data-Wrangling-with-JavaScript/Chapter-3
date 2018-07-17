@@ -1,6 +1,7 @@
 "use strict";
 
 const fs = require('fs');
+
 fs.readFile("./data/earthquakes.csv", "utf8",
 	(err, textFileData) => {
 		if (err) {

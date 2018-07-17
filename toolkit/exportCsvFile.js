@@ -4,8 +4,8 @@ const papa = require('papaparse');
 const file = require('./file.js');
 
 function exportCsvFile (fileName, data) {
-    const json = papa.unparse(data);
-    return file.write(fileName, json);
+    const csv = papa.unparse(data);
+    return file.write(fileName, csv);
 };
 
 module.exports = exportCsvFile;
