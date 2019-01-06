@@ -1,7 +1,7 @@
 {
-  "name": "chapter-4",
+  "name": "chapter-3",
   "version": "1.0.0",
-  "description": "Code listings and examples for Chapter 4 of JavaScript Data Wrangling.",
+  "description": "Code listings and examples for Chapter 3 of JavaScript Data Wrangling.",
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
